@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #007bff;
+    --primary-color: #004187;
     --background-dark: #1a1a1a;
     --text-light: #f4f4f4;
     --card-background: #2b2b2b;
@@ -79,7 +79,7 @@ section {
 }
 
 .project-card {
-    background-color: var(--card-background);
+    background-color: var(--primary-color);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -113,28 +113,6 @@ section {
     background-color: #0056b3;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 2rem auto;
-    text-align: left;
-}
-
-form label {
-    margin-top: 1rem;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    padding: 0.75rem;
-    margin-top: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: var(--text-light);
-}
-
 footer {
     background-color: var(--card-background);
     padding: 2rem;
@@ -142,16 +120,16 @@ footer {
     border-top: 1px solid #333;
 }
 
-.video-responsivo {
+.video-responsive {
   position: relative; 
   padding-bottom: 56.25%; 
   height: 0;
   overflow: hidden; 
 }
 
-.video-responsivo iframe,
-.video-responsivo object,
-.video-responsivo embed {
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
   position: absolute; 
   top: 0;
   left: 0;
