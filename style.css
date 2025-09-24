@@ -6,6 +6,10 @@
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a:link, a:visited, a:hover, a:active {
+    color: var(--text-light);
+    text-decoration: none;
+}
 body {
     font-family: var(--font-family);
     margin: 0;
