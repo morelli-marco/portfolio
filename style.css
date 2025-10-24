@@ -131,7 +131,7 @@ footer {
   overflow: hidden; 
 }
 
-.video-responsive iframe,
+.video-responsive video,
 .video-responsive object,
 .video-responsive embed {
   position: absolute; 
