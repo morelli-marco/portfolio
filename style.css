@@ -1,152 +1,12 @@
- 
-/*
-:root {
-    --primary-color: #004c9c;
-    --background-dark: #1a1a1a;
-    --text-light: #f4f4f4;
-    --card-background: #2b2b2b;
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-a:link, a:visited, a:hover, a:active {
-    color: var(--text-light);
-    text-decoration: none;
-}
-body {
-    font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-dark);
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-header {
-    background-color: var(--card-background);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-nav a {
-    color: var(--text-light);
-    text-decoration: none;
-    margin-right: 1.5rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--primary-color);
-}
-
-section {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-#hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #0d0d0d;
-}
-
-#hero h1 {
-    font-size: 4rem;
-    margin: 0;
-    color: var(--primary-color);
-}
-
-#hero .subtitle {
-    font-size: 1.5rem;
-    color: #aaa;
-}
-
-#hero img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-top: 2rem;
-    border: 5px solid var(--primary-color);
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.project-card {
-    background-color: var(--primary-color);
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    text-align: left;
-    
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-footer {
-    background-color: var(--card-background);
-    padding: 2rem;
-    text-align: center;
-    border-top: 1px solid #333;
-}
-
-.video-responsive {
-  position: relative; 
-  padding-bottom: 56.25%; 
-  height: 0;
-  overflow: hidden; 
-}
-
-.video-responsive video,
-.video-responsive object,
-.video-responsive embed {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: 100%; 
-  height: 100%; 
-}
-*/
 :root {
     
-    --primary-neon: #00f2ff; 
+    --primary-neon: #12d8e2; 
     --bg-dark: #0a0a0c;     
     
     
     --card-bg: #16161a;
     --text-main: #e0e0e0;
+    --text-card: #16161a;
     --text-dim: #94a3b8;
     --font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
 }
@@ -177,7 +37,7 @@ a:hover {
     text-shadow: 0 0 8px var(--primary-neon);
 }
 
-/* Header & Nav */
+/* --------------------Header & Nav--------------------------------- */
 header {
     background-color: rgba(10, 10, 12, 0.9);
     backdrop-filter: blur(10px);
@@ -204,14 +64,14 @@ nav a {
     color: var(--text-main);
 }
 
-/* Hero Section */
+/* ----------------------------Hero Section--------------------- */
 #hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 0.5rem;
     background: radial-gradient(circle at center, #112240 0%, var(--bg-dark) 70%);
 }
 
@@ -221,7 +81,12 @@ nav a {
     background: linear-gradient(to right, #fff, var(--primary-neon));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.3));
+}
+
+#hero p {
+    padding: 3rem;
 }
 
 #hero .subtitle {
@@ -244,11 +109,11 @@ nav a {
 }
 
 
-/* Sezioni */
+/* -------------------------Sections------------------------ */
 section {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
 }
 
 h2 {
@@ -268,11 +133,36 @@ h2::after {
     background: linear-gradient(to right, var(--primary-neon), transparent);
 }
 
-/* Cards */
+/* ------------------------Cards--------------------------------------- */
+
+.project3D-card {
+    background-color: var(--primary-neon); 
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.project3D-card h3, 
+.project3D-card p, 
+.project3D-card li {
+    color: #000 !important;
+}
+
+.project3D-card img {
+    width: 100%;
+    height: auto;      
+    display: block;
+    object-fit: normal; 
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap:  1.3rem;
     margin-top: 2rem;
 }
 
@@ -315,7 +205,7 @@ h2::after {
     font-weight: bold;
 }
 
-/* Video Wrapper */
+/* --------------------Video Wrapper---------------------- */
 .video-responsive {
     position: relative; 
     padding-bottom: 56.25%; 
@@ -335,11 +225,223 @@ h2::after {
     
 }
 
-/* Footer */
+/* --------------------Footer------------------------- */
 footer {
     padding: 4rem 2rem;
     text-align: center;
     color: var(--text-dim);
     font-size: 0.9rem;
     border-top: 1px solid #222;
+}
+
+/* -------------------Layout Project Page-------------------- */
+.project-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+.project-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.project-meta {
+    color: var(--text-dim);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ------------------Gallery--------------------- */
+
+
+/*  (Render e Wireframe) */
+
+.main-render, .main-wireframe {
+    width: 100%;
+    margin-bottom: 2rem; 
+}
+
+.main-render img, .main-wireframe img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: transform 0.3s ease;
+}
+
+/* Process title */
+
+.gallery-title {
+    text-align: center;
+    margin: 4rem 0 2rem;
+    color: var(--primary-neon);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.gallery-title::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background: linear-gradient(to right, var(--primary-neon), transparent);
+}
+
+/* Grid */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.process-grid img {
+    width: 100%;
+    height: 180px;      
+    object-fit: cover;  
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+
+.process-grid a img:hover {
+    border-color: var(--primary-neon);
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(18, 216, 226, 0.3);
+    filter: brightness(1.1);
+}
+
+/* ------------------Back Button----------------- */
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-neon);
+    border-radius: 5px;
+    margin: 4rem 0;
+}
+
+.btn-back:hover {
+    background: rgba(18, 216, 226, 0.1);
+}
+
+/* ------------------Link Button----------------- */
+
+.btn-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--text-main);
+    color: var(--text-card) !important; 
+    border: 1px solid var(--primary-neon);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-project:hover {
+    background-color: var(--primary-neon);
+    color: var(--text-card) !important; 
+    box-shadow: 0 0 15px var(--primary-neon);
+    transform: translateY(-2px);
+}
+
+/* ---  Mobile responsive --- */
+@media (max-width: 768px) {
+    
+    
+    section {
+        padding: 1rem 1.2rem;
+    }
+
+    
+    .project-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    
+    .project-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+   
+    .process-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .process-grid img {
+        height: 150px; 
+    }
+
+    
+    .btn-back {
+        width: 100%;
+        text-align: center;
+        margin: 2rem 0;
+    }
+}
+
+/* Lightbox */
+
+/* Il contenitore che copre tutto lo schermo */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Forza larghezza intero schermo */
+    height: 100vh; /* Forza altezza intero schermo */
+    background: rgba(0, 0, 0, 0.95);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox:target {
+    display: flex; /* Attiva il flexbox per centrare l'immagine */
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border: 1px solid var(--primary-neon);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(18, 216, 226, 0.3);
+    
+    
+    transform: none !important; 
+    transition: none !important;
+}
+
+/* Lo sfondo cliccabile per chiudere */
+.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-out;
+    z-index: -1; /* Mette il link di chiusura SOTTO l'immagine */
 }
